@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: azure;
+    border: 1px solid blue;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(196, 238, 11);
+    border: 1px solid rgb(109, 98, 1);
+
+    height: 80vh;
+    width: 100vw;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(103, 131, 127);
+    border: 1px solid rgb(30, 2, 56);
+
+    height: 20vh;
+    width: 100vw;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(226, 164, 123);
+    border: 1px solid rgb(194, 73, 4);
+    border-radius: 10px;
+
+    height: 60vh;
+    width: 25vw;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(228, 150, 215);
+    border: 1px solid rgb(255, 4, 213);
+
+    height: 34vh;
+    width: 21vw;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(194, 236, 182);
+    border: 1px solid rgb(9, 247, 68);
+
+    height: 8vh;
+    width: 24vw;
+}
+
+.botao {
+    font-size: larger;
+    font-weight: 600;
+    height: 10vh;
+    width: 14vw;
+    border-radius: 10px;
+}
+
+.botao:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.botaoGato {
+    color: aliceblue;
+    background-color: rgb(82, 98, 189);
+    border-color: blue;
+}
+
+.botaoGato:hover {
+    color: aliceblue;
+    background-color: rgb(43, 63, 180);
+    border-color: blue;
+}
+
+.botaoCachorro {
+    color: aliceblue;
+    background-color: rgb(204, 118, 96);
+    border-color: rgb(255, 0, 0);
+}
+
+.botaoCachorro:hover {
+    color: aliceblue;
+    background-color: rgb(211, 59, 48);
+    border-color: rgb(255, 0, 0);
+}
+
+.placar {
+    background-color: rgb(12, 131, 65);
+    border-color: rgb(3, 53, 25);
+    height: 12vh;
+    width: 12vw;
+}
+
+.vs {
+    width: 19vw;
+}
+
+img {
+    width: 19vw;
+}
