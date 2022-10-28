@@ -25,11 +25,11 @@
 
         <div class="caixa caixaGato">
             <figure id="fotosGatos">
-                <img src="assets/img_gato.webp" alt="Foto de Gato" srcset="">
+                <img id="fotoGato" src="" alt="Foto de Gato" srcset="">
             </figure>
 
             <section id="fatosGatos">
-                <h3>Gatos arranham objetos por instinto felino para deixar as unhas afiadas aaaaaaaaa aaaaaaaaaaa</h3>
+                <!-- <h3>A cat only has the ability to move their jaw up and down, not side to side like a human can.</h3> -->
             </section>
         </div>
 
@@ -43,18 +43,19 @@
 
         <div class="caixa caixaCachorro">
             <figure id="fotosCachorros">
-                <img src="assets/img_cachorro.webp" alt="Foto de Cachorro" srcset="">
+                <img id="fotoCachorro" src="" alt="Foto de Cachorro" srcset="">
             </figure>
 
             <section id="fatosCachorros">
-                <h3>Além de ter um olfato muito mais refinado, que permite detectar a presença do tutor pelo cheiro</h3>
+                <!-- <h3>Puppies are born deaf and cannot hear until they are about 21 days old. The young are born small,
+                    blind and helpless and require a long period of parental care.</h3> -->
             </section>
         </div>
 
     </main>
 
     <footer>
-        <input type="button" value="VOTAR" class="botao botaoGato">
+        <input type="button" value="VOTAR" class="botao botaoGato" onclick="votar(1)">
 
         <div class="placar">
             <mark id="pontoGato">
@@ -66,7 +67,7 @@
             </mark>
         </div>
 
-        <input type="button" value="VOTAR" class="botao botaoCachorro">
+        <input type="button" value="VOTAR" class="botao botaoCachorro" onclick="votar(2)">
     </footer>
 
     <script src="codigo.js"></script>

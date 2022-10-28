@@ -16,15 +16,41 @@
 // máximo 95 caracteres
 // https://dog-api.kinduff.com/api/facts (NÃO TEM COMO ESPECIFICAR TAMAMHO)
 
-// API FOTOS GATOS
-// var fotosGatos = document.getelementbyId("fotosGatos")
-// document.createElement("img")
-// https://api.thecatapi.com/v1/images/search
 
-// API FOTOS CACHORROS
-//  var fotosCachorros = document.getelementbyId("fotosCachorros")
-// document.createElement("img")
-// https://dog.ceo/api/breeds/image/random
+async function votar(botao) {
+    // FOTO GATO
+    var fotoGato = document.getElementById("fotoGato")
+
+    var endpointFotoGato = "https://api.thecatapi.com/v1/images/search"
+
+    var response = await fetch(endpointFotoGato)
+    var bodyJson = await response.json()
+
+    var imagemGato = bodyJson[0].url
+
+    fotoGato.src = imagemGato
+
+    // FOTO CACHORRO
+    var fotoCachorro = document.getElementById("fotoCachorro")
+
+    var endpointFotoCachorro = "https://dog.ceo/api/breeds/image/random"
+
+    var responseC = await fetch(endpointFotoCachorro)
+    var bodyJsonC = await responseC.json()
+
+    var imagemCachorro = bodyJsonC.message
+
+    fotoCachorro.src = imagemCachorro
+
+    // FATO GATO
+
+
+
+    // FATO CACHORRO
+
+
+}
+
 
 // PLACAR
 // var placarGato = document.getelementbyId("pontoGato")
