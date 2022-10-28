@@ -10,8 +10,7 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(196, 238, 11);
-
+    background-color: rgb(37, 39, 39);
     height: 80vh;
     width: 100vw;
 }
@@ -21,8 +20,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(103, 131, 127);
-
+    background-color: rgb(37, 39, 39);
     height: 20vh;
     width: 100vw;
 }
@@ -32,10 +30,8 @@ div {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: rgb(226, 164, 123);
-    border: 1px solid rgb(194, 73, 4);
+    background-color: rgb(224, 224, 224);
     border-radius: 10px;
-
     height: 60vh;
     width: 25vw;
 }
@@ -44,30 +40,38 @@ figure {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(228, 150, 215);
-    border: 1px solid rgb(255, 4, 213);
-
     height: 34vh;
     width: 21vw;
+}
+
+.caixaGato {
+    background-color: rgb(134, 145, 240);
+    border: 2px solid rgb(2, 20, 182);
+}
+
+.caixaCachorro {
+    background-color: rgb(211, 111, 86);
+    border: 2px solid rgb(255, 0, 0);
 }
 
 section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(194, 236, 182);
-    border: 1px solid rgb(9, 247, 68);
-
+    text-align: center;
+    border-radius: 4px;
     height: 8vh;
-    width: 24vw;
+    width: 22vw;
+    font-family: 'Roboto', sans-serif;
 }
 
 .botao {
-    font-size: larger;
+    font-size: 30px;
     font-weight: 600;
     height: 10vh;
     width: 14vw;
     border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .botao:hover {
@@ -83,33 +87,86 @@ section {
 
 .botaoGato:hover {
     color: aliceblue;
-    background-color: rgb(43, 63, 180);
+    background-color: blue;
     border-color: blue;
 }
 
 .botaoCachorro {
     color: aliceblue;
-    background-color: rgb(204, 118, 96);
+    background-color: rgb(201, 99, 73);
     border-color: rgb(255, 0, 0);
 }
 
 .botaoCachorro:hover {
     color: aliceblue;
-    background-color: rgb(211, 59, 48);
+    background-color: rgb(255, 0, 0);
     border-color: rgb(255, 0, 0);
 }
 
 .placar {
-    background-color: rgb(12, 131, 65);
-    border-color: rgb(3, 53, 25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(133, 150, 140);
+    border-color: rgb(26, 27, 27);
+    border-radius: 2px;
     height: 12vh;
-    width: 12vw;
+    width: 15vw;
+    font-family: 'Stick No Bills', sans-serif;
+    color: aliceblue;
+    font-size: 70px;
+}
+
+p {
+    color: aliceblue;
+    background-color: rgb(133, 150, 140);
+}
+
+h1 {
+    font-size: 70px;
+    color: aliceblue;
+    margin-bottom: 2vh;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: larger;
 }
 
 .vs {
-    width: 19vw;
+    width: 21vw;
+    border-radius: 0px;
 }
 
 img {
-    width: 19vw;
+    width: 22vw;
+    border-radius: 5px;
+}
+
+#meio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 0px;
+    background-color: rgb(37, 39, 39);
+}
+
+aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 0px;
+    width: 25vw;
+    height: 8vh;
+}
+
+.animalPerson {
+    color: aliceblue;
+    font-family: 'Stick No Bills', sans-serif;
+    background-color: rgb(37, 39, 39);
+    font-size: 50px;
 }
