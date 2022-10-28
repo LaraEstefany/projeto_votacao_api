@@ -9,32 +9,45 @@
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <main>
 
-        <div class="caixa gatos">
-            <figure class="fotos gatos">
+        <div class="caixa caixaGato">
+            <figure id="fotosGatos">
                 <img src="assets/img_gato.webp" alt="Foto de Gato" srcset="">
             </figure>
 
-            <section class="fatos gatos">
-                <p>Gatos arranham objetos por instinto felino para deixar as unhas afiadas aaaaaaaaa aaaaaaaaaaa</p>
-                <!-- o texto tem que ter no max 95 caracteres -->
+            <section id="fatosGatos">
+                <h3>Gatos arranham objetos por instinto felino para deixar as unhas afiadas aaaaaaaaa aaaaaaaaaaa</h3>
             </section>
         </div>
 
-        <img class="vs" src="assets/vs.png" alt="VS" srcset="">
+        <div id="meio">
+            <img class="vs" src="assets/vs.png" alt="VS" srcset="">
 
-        <div class="caixa cachorros">
-            <figure class="fotos cachorros">
+            <aside>
+                <!-- <h2 class="animalPerson">VOCÊ É UM DOGPERSON!</h2> -->
+            </aside>
+        </div>
+
+        <div class="caixa caixaCachorro">
+            <figure id="fotosCachorros">
                 <img src="assets/img_cachorro.webp" alt="Foto de Cachorro" srcset="">
             </figure>
 
-            <section class="fatos cachorros">
-                <p>Além de ter um olfato muito mais refinado, que permite detectar a presença do tutor pelo cheiro</p>
+            <section id="fatosCachorros">
+                <h3>Além de ter um olfato muito mais refinado, que permite detectar a presença do tutor pelo cheiro</h3>
             </section>
         </div>
 
@@ -43,7 +56,15 @@
     <footer>
         <input type="button" value="VOTAR" class="botao botaoGato">
 
-        <div class="placar"></div>
+        <div class="placar">
+            <mark id="pontoGato">
+                <p>0</p>
+            </mark>
+            <h1>:</h1>
+            <mark id="pontoCachorro">
+                <p>0</p>
+            </mark>
+        </div>
 
         <input type="button" value="VOTAR" class="botao botaoCachorro">
     </footer>
