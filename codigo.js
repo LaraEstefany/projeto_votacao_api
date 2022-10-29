@@ -1,21 +1,7 @@
-// RESULTADOS: classe: animalPerson
-// VOCÊ É UM CATPERSON!
-// VOCÊ É UM DOGPERSON!
-// document.createElement("h2")
-// h2 innerText = resultado
-
-// API FATOS GATOS
-// var fatosGatos = document.getelementbyId("fatosGatos")
-// document.createElement("h3")
-// máximo 95 caracteres
-// https://catfact.ninja/fact?max_length=95
-
 // API FATOS CACHORROS
-// var fatosCachorros = document.getelementbyId("fatosCachorros")
-// document.createElement("h3")
-// máximo 95 caracteres
 // https://dog-api.kinduff.com/api/facts (NÃO TEM COMO ESPECIFICAR TAMAMHO)
 
+votar()
 
 async function votar(botao) {
     // FOTO GATO
@@ -43,12 +29,27 @@ async function votar(botao) {
     fotoCachorro.src = imagemCachorro
 
     // FATO GATO
+    var fatoGato = document.getElementById("fatoGato")
 
+    var endpointFatoGato = "https://catfact.ninja/fact?max_length=95"
 
+    var responseFG = await fetch(endpointFatoGato)
+    var bodyJsonFG = await responseFG.json()
+
+    fatoGato.innerText = bodyJsonFG.fact
 
     // FATO CACHORRO
 
+    // debugger
 
+    // var fatoCachorro = document.getElementById("fatoCachorro")
+
+    // var endpointFatoCachorro = "https://dog-api.kinduff.com/api/facts"
+
+    // var responseFC = await fetch(endpointFatoCachorro)
+    // var bodyJsonFC = await responseFC.json()
+
+    // fatoCachorro.innerText = bodyJsonFC[0].facts
 }
 
 
@@ -58,4 +59,9 @@ async function votar(botao) {
 // var placarCachorro = document.getelementbyId("pontoCachorro")
 // document.createElement("p")
 
+// RESULTADOS: classe: animalPerson
+// VOCÊ É UM CATPERSON!
+// VOCÊ É UM DOGPERSON!
+// document.createElement("h2")
+// h2 innerText = resultado
 
