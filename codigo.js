@@ -3,6 +3,10 @@
 
 votar()
 
+var votoGato = 0
+var votoCachorro = 0
+
+
 async function votar(botao) {
     // FOTO GATO
     var fotoGato = document.getElementById("fotoGato")
@@ -50,18 +54,32 @@ async function votar(botao) {
     // var bodyJsonFC = await responseFC.json()
 
     // fatoCachorro.innerText = bodyJsonFC[0].facts
+
+    if (botao === 1) {
+        votoGato = votoGato + 1
+    } else if (botao === 2) {
+        votoCachorro = votoCachorro + 1
+    }
+
+    var pontuacaoGato = document.getElementById("pontuacaoGato")
+    var pontuacaoCachorro = document.getElementById("pontuacaoCachorro")
+
+    pontuacaoCachorro.innerText = votoCachorro
+    pontuacaoGato.innerText = votoGato
+
+    var aside = document.getElementById("aside")
+
+    if (votoCachorro == 10) {
+        var h2 = document.createElement("h2")
+        h2.innerText = "VOCÊ É UM DOGPERSON!"
+        h2.classList.add("animalPerson")
+
+        aside.append(h2)
+    } else if (votoGato == 10) {
+        var h2 = document.createElement("h2")
+        h2.innerText = "VOCÊ É UM CATPERSON!"
+        h2.classList.add("animalPerson")
+
+        aside.append(h2)
+    }
 }
-
-
-// PLACAR
-// var placarGato = document.getelementbyId("pontoGato")
-// document.createElement("p")
-// var placarCachorro = document.getelementbyId("pontoCachorro")
-// document.createElement("p")
-
-// RESULTADOS: classe: animalPerson
-// VOCÊ É UM CATPERSON!
-// VOCÊ É UM DOGPERSON!
-// document.createElement("h2")
-// h2 innerText = resultado
-
