@@ -13,8 +13,8 @@ div {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 60vh;
-    width: 25vw;
+    height: 65vh;
+    width: 28vw;
     border-radius: 10px;
 }
 
@@ -68,7 +68,7 @@ figure {
 }
 
 img {
-    height: 28vh;
+    height: 29vh;
     border-radius: 5px;
 }
 
@@ -81,7 +81,7 @@ section {
     width: 22vw;
     border-radius: 4px;
     font-family: 'Roboto', sans-serif;
-    font-size: larger;
+    font-size: 23px;
     color: rgb(255, 255, 255);
 }
 
@@ -120,7 +120,7 @@ footer {
 }
 
 .botaoCachorro {
-    background-color: rgb(201, 99, 73);
+    background-color: rgb(201, 71, 62);
     border-color: rgb(255, 0, 0);
 }
 
