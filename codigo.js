@@ -6,7 +6,6 @@ votar()
 var votoGato = 0
 var votoCachorro = 0
 
-
 async function votar(botao) {
     // FOTO GATO
     var fotoGato = document.getElementById("fotoGato")
@@ -43,9 +42,6 @@ async function votar(botao) {
     fatoGato.innerText = bodyJsonFG.fact
 
     // FATO CACHORRO
-
-    // debugger
-
     // var fatoCachorro = document.getElementById("fatoCachorro")
 
     // var endpointFatoCachorro = "https://dog-api.kinduff.com/api/facts"
@@ -62,10 +58,10 @@ async function votar(botao) {
     }
 
     var pontuacaoGato = document.getElementById("pontuacaoGato")
-    var pontuacaoCachorro = document.getElementById("pontuacaoCachorro")
-
-    pontuacaoCachorro.innerText = votoCachorro
     pontuacaoGato.innerText = votoGato
+
+    var pontuacaoCachorro = document.getElementById("pontuacaoCachorro")
+    pontuacaoCachorro.innerText = votoCachorro
 
     var aside = document.getElementById("aside")
 
