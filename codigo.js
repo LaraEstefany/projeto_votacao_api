@@ -1,10 +1,33 @@
 // API FATOS CACHORROS
-// https://dog-api.kinduff.com/api/facts (NÃO TEM COMO ESPECIFICAR TAMAMHO)
+// https://dog-api.kinduff.com/api/facts (NÃO FUNCIONA)
 
+var teste = 0
 votar()
 
+var votoTotal = 0
 var votoGato = 0
 var votoCachorro = 0
+
+var dogFacts = ["Their sense of smell is at least 40x better than ours.",
+    "Some have such good noses they can sniff out medical problems.",
+    "Dogs can sniff at the same time as breathing.",
+    "Your dog could be left or right-pawed.",
+    "Along with their noses, their hearing is super sensitive.",
+    "Dogs have 18 muscles controlling their ears.",
+    "Dogs are about as intelligent as a two-year-old.",
+    "Petting a dog can lower your blood pressure.",
+    "A dog's average body temperature is 38.5ºC.",
+    "Dogs nose prints are as unique as a humans finger prints, and can be used to accurately identify them.",
+    "Dalmatians are completely white at birth.",
+    "Female wolves have been known to travel great distances to regurgitate full meals for their hungry pups.",
+    "In Croatia, scientists discovered that lampposts were falling down because a chemical in the urine of male dogs was rotting the metal.",
+    "Dogs can be taught to count and solve simple math problems.",
+    "Dogs sometimes appear to smile -- much like humans -- with open mouth grinning. This may indicate a relaxed, submissive state.",
+    "Humans can detect sounds at 20,000 times per second, while dogs can sense frequencies of 30,000 times per second.",
+    "Dogs are mentioned in the Bible more than 35 times.",
+    "Dogs see in colors of various shades of blue and yellow.",
+    "In 2001, it was estimated that there are approximately 400 million dogs in the world.",
+    "Dogs have no sense of time."]
 
 async function votar(botao) {
     // FOTO GATO
@@ -53,9 +76,15 @@ async function votar(botao) {
 
     if (botao === 1) {
         votoGato = votoGato + 1
+        votoTotal = votoTotal + 1
     } else if (botao === 2) {
         votoCachorro = votoCachorro + 1
+        votoTotal = votoTotal + 1
     }
+
+    // FATO CACHORRO 2.0
+    var fatoCachorro = document.getElementById("fatoCachorro")
+    fatoCachorro.innerText = dogFacts[votoTotal]
 
     var pontuacaoGato = document.getElementById("pontuacaoGato")
     pontuacaoGato.innerText = votoGato
