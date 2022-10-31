@@ -35,9 +35,9 @@ async function votar(botao) {
 
         if (teste <= 3) {
             alert("Aperte f5 ou recarregue a página para jogar novamente!")
-        } else if (teste <= 5) {
+        } else if (teste <= 4) {
             alert("... Ow amigão, recarrega isso aí pô, já falei já.")
-        } else if (teste <= 6) {
+        } else if (teste <= 5) {
             alert("Tá, deixa que eu faço.")
             window.location.reload(true)
         }
