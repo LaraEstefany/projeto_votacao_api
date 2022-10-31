@@ -1,5 +1,6 @@
 // API FATOS CACHORROS
 // https://dog-api.kinduff.com/api/facts (NÃO FUNCIONA)
+// so comentei pra fazer o repositorio :)
 
 var teste = 0
 votar()
