@@ -30,81 +30,96 @@ var dogFacts = ["Their sense of smell is at least 40x better than ours.",
     "Dogs have no sense of time."]
 
 async function votar(botao) {
-    // FOTO GATO
-    var fotoGato = document.getElementById("fotoGato")
+    if (votoTotal == 19 || votoGato == 10 || votoCachorro == 10) {
+        teste = teste + 1
 
-    var endpointFotoGato = "https://api.thecatapi.com/v1/images/search"
-
-    var response = await fetch(endpointFotoGato)
-    var bodyJson = await response.json()
-
-    var imagemGato = bodyJson[0].url
-
-    fotoGato.src = imagemGato
-
-    // FOTO CACHORRO
-    var fotoCachorro = document.getElementById("fotoCachorro")
-
-    var endpointFotoCachorro = "https://dog.ceo/api/breeds/image/random"
-
-    var responseC = await fetch(endpointFotoCachorro)
-    var bodyJsonC = await responseC.json()
-
-    var imagemCachorro = bodyJsonC.message
-
-    fotoCachorro.src = imagemCachorro
-
-    // FATO GATO
-    var fatoGato = document.getElementById("fatoGato")
-
-    var endpointFatoGato = "https://catfact.ninja/fact?max_length=95"
-
-    var responseFG = await fetch(endpointFatoGato)
-    var bodyJsonFG = await responseFG.json()
-
-    fatoGato.innerText = bodyJsonFG.fact
-
-    // FATO CACHORRO
-    // var fatoCachorro = document.getElementById("fatoCachorro")
-
-    // var endpointFatoCachorro = "https://dog-api.kinduff.com/api/facts"
-
-    // var responseFC = await fetch(endpointFatoCachorro)
-    // var bodyJsonFC = await responseFC.json()
-
-    // fatoCachorro.innerText = bodyJsonFC[0].facts
-
-    if (botao === 1) {
-        votoGato = votoGato + 1
-        votoTotal = votoTotal + 1
-    } else if (botao === 2) {
-        votoCachorro = votoCachorro + 1
-        votoTotal = votoTotal + 1
+        if (teste <= 3) {
+            alert("Aperte f5 ou recarregue a página para jogar novamente!")
+        } else if (teste <= 5) {
+            alert("... Ow amigão, recarrega isso aí pô, já falei já.")
+        } else if (teste <= 6) {
+            alert("Tá, deixa que eu faço.")
+            window.location.reload(true)
+        }
     }
 
-    // FATO CACHORRO 2.0
-    var fatoCachorro = document.getElementById("fatoCachorro")
-    fatoCachorro.innerText = dogFacts[votoTotal]
+    if (teste == 0) {
+        // FOTO GATO
+        var fotoGato = document.getElementById("fotoGato")
 
-    var pontuacaoGato = document.getElementById("pontuacaoGato")
-    pontuacaoGato.innerText = votoGato
+        var endpointFotoGato = "https://api.thecatapi.com/v1/images/search"
 
-    var pontuacaoCachorro = document.getElementById("pontuacaoCachorro")
-    pontuacaoCachorro.innerText = votoCachorro
+        var response = await fetch(endpointFotoGato)
+        var bodyJson = await response.json()
 
-    var aside = document.getElementById("aside")
+        var imagemGato = bodyJson[0].url
 
-    if (votoCachorro == 10) {
-        var h2 = document.createElement("h2")
-        h2.innerText = "VOCÊ É UM DOGPERSON!"
-        h2.classList.add("animalPerson")
+        fotoGato.src = imagemGato
 
-        aside.append(h2)
-    } else if (votoGato == 10) {
-        var h2 = document.createElement("h2")
-        h2.innerText = "VOCÊ É UM CATPERSON!"
-        h2.classList.add("animalPerson")
+        // FOTO CACHORRO
+        var fotoCachorro = document.getElementById("fotoCachorro")
 
-        aside.append(h2)
+        var endpointFotoCachorro = "https://dog.ceo/api/breeds/image/random"
+
+        var responseC = await fetch(endpointFotoCachorro)
+        var bodyJsonC = await responseC.json()
+
+        var imagemCachorro = bodyJsonC.message
+
+        fotoCachorro.src = imagemCachorro
+
+        // FATO GATO
+        var fatoGato = document.getElementById("fatoGato")
+
+        var endpointFatoGato = "https://catfact.ninja/fact?max_length=95"
+
+        var responseFG = await fetch(endpointFatoGato)
+        var bodyJsonFG = await responseFG.json()
+
+        fatoGato.innerText = bodyJsonFG.fact
+
+        // FATO CACHORRO
+        // var fatoCachorro = document.getElementById("fatoCachorro")
+
+        // var endpointFatoCachorro = "https://dog-api.kinduff.com/api/facts"
+
+        // var responseFC = await fetch(endpointFatoCachorro)
+        // var bodyJsonFC = await responseFC.json()
+
+        // fatoCachorro.innerText = bodyJsonFC[0].facts
+
+        if (botao === 1) {
+            votoGato = votoGato + 1
+            votoTotal = votoTotal + 1
+        } else if (botao === 2) {
+            votoCachorro = votoCachorro + 1
+            votoTotal = votoTotal + 1
+        }
+
+        // FATO CACHORRO 2.0
+        var fatoCachorro = document.getElementById("fatoCachorro")
+        fatoCachorro.innerText = dogFacts[votoTotal]
+
+        var pontuacaoGato = document.getElementById("pontuacaoGato")
+        pontuacaoGato.innerText = votoGato
+
+        var pontuacaoCachorro = document.getElementById("pontuacaoCachorro")
+        pontuacaoCachorro.innerText = votoCachorro
+
+        var aside = document.getElementById("aside")
+
+        if (votoCachorro == 10) {
+            var h2 = document.createElement("h2")
+            h2.innerText = "VOCÊ É UM DOGPERSON!"
+            h2.classList.add("animalPerson")
+
+            aside.append(h2)
+        } else if (votoGato == 10) {
+            var h2 = document.createElement("h2")
+            h2.innerText = "VOCÊ É UM CATPERSON!"
+            h2.classList.add("animalPerson")
+
+            aside.append(h2)
+        }
     }
 }
